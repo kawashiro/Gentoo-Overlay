@@ -15,7 +15,7 @@ fi
 
 PROGNAME="PHP Storm"
 
-RESTRICT="strip mirror"
+RESTRICT="strip"
 DEPEND=">=virtual/jre-1.6"
 SLOT="0"
 S=${WORKDIR}
