@@ -1,7 +1,7 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-
+EAPI="5"
 inherit eutils
 
 #WWWVER=$(echo ${P} | sed -e 's/_p/-/')
@@ -18,16 +18,18 @@ IUSE=""
 
 RESTRICT="strip"
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND=">=x11-libs/gtk+-2:2"
 
+S="${WORKDIR}/${WWWVER}.i686.manualinstall"
 
 src_install() {
 	exeinto /usr/bin
-	doexe ${WORKDIR}/${WWWVER}.i686.manualinstall/tixati
+	doexe ${S}/tixati
 	insinto /usr/share/icons/hicolor/48x48/apps
-	doins ${WORKDIR}/${WWWVER}.i686.manualinstall/tixati.png
+	doins ${S}/tixati.png
 	insinto /usr/share/pixmaps
-	doins ${WORKDIR}/${WWWVER}.i686.manualinstall/tixati.png
+	doins ${S}/tixati.png
 	insinto /usr/share/applications
-	doins ${WORKDIR}/${WWWVER}.i686.manualinstall/tixati.desktop
+	doins ${S}/tixati.desktop
 }
+
