@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Advanced and flexible BitTorrent client"
 HOMEPAGE="http://www.tixati.com/"
-WWWVER="tixati-1.96-1"
+WWWVER="tixati-1.99-1"
 SRC_URI="http://www.tixati.com/download/${WWWVER}.i686.manualinstall.tar.gz"
 
 LICENSE="EULA"
