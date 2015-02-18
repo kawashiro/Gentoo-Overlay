@@ -1,0 +1,11 @@
+--- a/src/progress.c	2014-10-27 11:05:17.000000000 +0300
++++ b/src/progress.c	2015-02-18 13:30:13.828270873 +0300
+@@ -1159,7 +1159,7 @@
+       move_to_end (p);
+     }
+ 
+-  while (p - bp->buffer - bytes_cols_diff - size_grouped_diff < bp->width)
++  while (p - bp->buffer - bytes_cols_diff < bp->width)
+     *p++ = ' ';
+   *p = '\0';
+ }
