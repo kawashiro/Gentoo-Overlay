@@ -25,11 +25,13 @@ RDEPEND="
 	>=x11-libs/gdk-pixbuf-2.0
 "
 
-
-S="${WORKDIR}/${WWWVER}.i686.manualinstall"
-[[ -d "$S" ]] || S="${WORKDIR}/${WWWVER}.x86_64.manualinstall"
+S="${WORKDIR}/${WWWVER}.$(uname -m).manualinstall"
 
 src_install() {
+    #_S="${S}"
+    #S="${S}.i686.manualinstall"
+	#[[ -d "$S" ]] || S="${_S}.x86_64.manualinstall"
+
 	exeinto /usr/bin
 	doexe ${S}/tixati
 	insinto /usr/share/icons/hicolor/48x48/apps
