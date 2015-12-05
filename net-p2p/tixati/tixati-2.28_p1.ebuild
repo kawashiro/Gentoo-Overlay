@@ -4,11 +4,9 @@
 EAPI="5"
 inherit eutils
 
-#WWWVER=$(echo ${P} | sed -e 's/_p/-/')
-
 DESCRIPTION="Advanced and flexible BitTorrent client"
 HOMEPAGE="http://www.tixati.com/"
-WWWVER="tixati-2.12-1"
+WWWVER="tixati-2.28-1"
 SRC_URI="
 	x86? ( http://www.tixati.com/download/${WWWVER}.i686.manualinstall.tar.gz )
 	amd64? ( http://www.tixati.com/download/${WWWVER}.x86_64.manualinstall.tar.gz )
@@ -28,10 +26,6 @@ RDEPEND="
 S="${WORKDIR}/${WWWVER}.$(uname -m).manualinstall"
 
 src_install() {
-    #_S="${S}"
-    #S="${S}.i686.manualinstall"
-	#[[ -d "$S" ]] || S="${_S}.x86_64.manualinstall"
-
 	exeinto /usr/bin
 	doexe ${S}/tixati
 	insinto /usr/share/icons/hicolor/48x48/apps
