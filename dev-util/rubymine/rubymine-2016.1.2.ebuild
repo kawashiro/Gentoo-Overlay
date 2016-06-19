@@ -28,6 +28,6 @@ src_install() {
 	local icon=${PN}
 	newicon "RubyMine-${PV}/bin/${PN}.png" ${icon}.png
 	dodir /usr/bin
-	make_wrapper "${PN}" "/opt/${P}/bin/${PN}.sh"
+	make_wrapper "${PN}" "/opt/${PN}/bin/${PN}.sh"
 	make_desktop_entry ${PN} "RubyMine ${PV}" ${icon} "Development;IDE"
 }
