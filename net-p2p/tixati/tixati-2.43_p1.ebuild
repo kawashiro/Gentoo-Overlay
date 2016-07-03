@@ -6,7 +6,7 @@ inherit eutils
 
 DESCRIPTION="Advanced and flexible BitTorrent client"
 HOMEPAGE="http://www.tixati.com/"
-WWWVER="tixati-2.42-1"
+WWWVER="tixati-2.43-1"
 SRC_URI="
 	x86? ( http://www.tixati.com/download/${WWWVER}.i686.manualinstall.tar.gz )
 	amd64? ( http://www.tixati.com/download/${WWWVER}.x86_64.manualinstall.tar.gz )
